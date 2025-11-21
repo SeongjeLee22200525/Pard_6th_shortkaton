@@ -82,6 +82,7 @@ export const deleteRuleApi = async (
 
 interface VoteRequest {
   ruleId: number;
+  userName: string;
   isCheck: boolean;
 }
 

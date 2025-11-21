@@ -7,7 +7,7 @@ export default function Header() {
   const pathname = usePathname().toLowerCase(); 
 
   const isSchedule = pathname.includes("schedule");
-  const isRule = pathname.includes("rules");
+  const isRule = pathname.includes("makerule");
   const isMypage = pathname.includes("mypage");
 
   // 공통 스타일
@@ -16,12 +16,14 @@ export default function Header() {
   return (
     <header className="w-full bg-gray-100 flex items-center justify-between px-20 pt-8 pb-6">
       <div>
+        <Link href="/">
         <Image
           src="/logo.svg"
           alt="BBD Logo"
           width={100}
           height={60}
         />
+        </Link>
       </div>
 
       {/* 네비게이션 */}
@@ -33,8 +35,8 @@ export default function Header() {
           className={
             baseStyle +
             (isSchedule
-              ? " bg-black text-white"
-              : " text-black hover:bg-black/10")
+              ? " bg-black text-white justify-start text-xl font-bold font-['Pretendard']"
+              : " text-black text-xl font-bold font-['Pretendard'] hover:bg-black/10")
           }
         >
           Schedule
@@ -46,8 +48,8 @@ export default function Header() {
           className={
             baseStyle +
             (isRule
-              ? " bg-black text-white"
-              : " text-black hover:bg-black/10")
+              ? " bg-black text-white justify-start text-xl font-bold font-['Pretendard']"
+              : " text-black text-xl font-bold font-['Pretendard'] hover:bg-black/10")
           }
         >
           Rule
@@ -59,11 +61,11 @@ export default function Header() {
           className={
             baseStyle +
             (isMypage
-              ? " bg-black text-white"
-              : " text-black hover:bg-black/10")
+              ? " bg-black text-white justify-start text-xl font-bold font-['Pretendard']"
+              : " text-black text-xl font-bold font-['Pretendard'] hover:bg-black/10")
           }
         >
-          My page
+          My Board
         </Link>
 
       </nav>
