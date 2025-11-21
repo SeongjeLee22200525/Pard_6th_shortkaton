@@ -1,40 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+🌐 프로젝트명
+BBD: Bang BoarD
 
-## Getting Started
+📌 1. 기획
 
-First, run the development server:
+모든 액션 후 자동 갱신(fetchRules)으로 최신 상태 유지
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+이름 미입력 시 차단하여 기획 의도 반영
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+규칙 제안은 익명 보장
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+🎨 2. 디자인 (UI 구현)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+디자이너 시안 기반으로 레이아웃, 색상, 아이콘, 여백 그대로 구현
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+수정 모드시 아이콘 변경(핀, 쓰레기통 before/after) 등 인터랙션 충실히 반영
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+전체적인 톤앤매너(블랙 박스, 화이트 텍스트, 라운드 UI) 그대로 구현
 
-## Learn More
+💻 3. 개발 (메인 기능)
 
-To learn more about Next.js, take a look at the following resources:
+규칙 리스트 조회(확정/제안 자동 분류)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+규칙 제안 추가
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+투표를 통한 규칙 확정
 
-## Deploy on Vercel
+2단계 삭제(빨간 표시 → Confirm → 실제 삭제)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+useState / useEffect 기반의 단순·명확한 상태관리
